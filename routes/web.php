@@ -29,6 +29,8 @@ Route::middleware(['auth', 'verified'])->group(function () {
 
 });
 
-
+Route::get('migrate',function (){
+    return \Illuminate\Support\Facades\Artisan::call('migrate');
+});
 Route::get('country/{id}', 'AddressController@country')->name('country');
 Route::get('state/{id}', 'AddressController@state')->name('state');
