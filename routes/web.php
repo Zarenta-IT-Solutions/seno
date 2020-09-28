@@ -13,8 +13,22 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-Route::middleware(['auth', 'verified','role:Admin'])->group(function () {
-    Route::get('/', 'HomeController@index')->name('home');
-    Route::resource('profile', 'ProfileController');
+Route::middleware(['auth', 'verified','role:Admin'])->name('admin.')->prefix('admin')->namespace('admin')->group(function () {
+//    Route::get('/', 'HomeController@index')->name('home');
     Route::resource('users', 'UserController');
+    Route::resource('gifts', 'GiftItemController');
+    Route::resource('products', 'ProductController');
+    Route::resource('report', 'ReportController');
 });
+
+Route::middleware(['auth', 'verified'])->group(function () {
+    Route::get('/', 'HomeController@index')->name('home');
+    Route::get('/profile', 'ProfileController@index')->name('profile');
+    Route::get('/dashboard', 'HomeController@index');
+    Route::resource('/notifications', 'NotificationController');
+
+});
+
+
+Route::get('country/{id}', 'AddressController@country')->name('country');
+Route::get('state/{id}', 'AddressController@state')->name('state');
