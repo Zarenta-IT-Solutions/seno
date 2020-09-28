@@ -49,7 +49,7 @@
 
         <!-- Divider -->
         <hr class="sidebar-divider">
-
+        @role('Admin')
         <!-- Heading -->
         <div class="sidebar-heading">
             Users
@@ -89,7 +89,7 @@
                 <div class="bg-white py-2 collapse-inner rounded">
                     <a class="collapse-item" href="{{route('admin.gifts.create')}}">Add New Gift Item</a>
                     <a class="collapse-item" href="{{route('admin.gifts.index')}}">Update/Delete Gift Item</a>
-                    <a class="collapse-item" href="{{route('admin.gifts.show',21)}}">Assign Gift Items</a>
+
                     <div class="collapse-divider"></div>
                 </div>
             </div>
@@ -146,7 +146,7 @@
         </li>
         <!-- Divider -->
         <hr class="sidebar-divider d-none d-md-block">
-
+        @endrole
         <!-- Sidebar Toggler (Sidebar) -->
         <div class="text-center d-none d-md-inline">
             <button class="rounded-circle border-0" id="sidebarToggle"></button>
@@ -233,7 +233,7 @@
                                 </div>
                                 <div>
                                     <div class="small text-gray-500">{{$notification->created_at->diffForHumans()}}</div>
-                                    <span class="font-weight-bold">A new monthly report is ready to download!</span>
+                                    <span class="font-weight-bold">{{$notification->msg}}</span>
                                 </div>
                             </a>
                             @endforeach

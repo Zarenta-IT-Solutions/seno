@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\AssignGift;
 use App\Models\Gift;
 use App\Models\User;
+use App\Notifications\AssignGiftNotification;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
@@ -23,8 +24,10 @@ class GiftItemController extends Controller
         if($request->has('quantity'))
         {
             $gift = Gift::findOrFail($request->id);
+            $user = User::find($request->user_id);
             $assign = AssignGift::firstorCreate(['quantity'=>$request->quantity,'gift_id'=>$request->id,'user_id'=>$request->user_id]);
             $gift->quantity = $gift->quantity-$request->quantity;
+            $user->notify(new AssignGiftNotification($assign));
             $gift->update();
             return 1;
         }

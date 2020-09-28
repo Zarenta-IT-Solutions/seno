@@ -2,6 +2,7 @@
 
 namespace App\Notifications;
 
+use App\Models\AssignGift;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Messages\MailMessage;
@@ -11,14 +12,16 @@ class AssignGiftNotification extends Notification
 {
     use Queueable;
 
+    protected $assign;
+
     /**
      * Create a new notification instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct(AssignGift $assign)
     {
-        //
+        $this->assign = $assign;
     }
 
     /**
@@ -29,7 +32,7 @@ class AssignGiftNotification extends Notification
      */
     public function via($notifiable)
     {
-        return ['mail'];
+        return ['mail','database'];
     }
 
     /**
@@ -41,9 +44,11 @@ class AssignGiftNotification extends Notification
     public function toMail($notifiable)
     {
         return (new MailMessage)
-                    ->line('The introduction to the notification.')
-                    ->action('Notification Action', url('/'))
-                    ->line('Thank you for using our application!');
+            ->subject('Stock Assign')
+            ->line('Hello '.$notifiable->name)
+            ->line('New Stock Assign In Your Account')
+            ->action('Accept', route('stockist.products.show',$this->assign->id));
+
     }
 
     /**
@@ -54,8 +59,6 @@ class AssignGiftNotification extends Notification
      */
     public function toArray($notifiable)
     {
-        return [
-            //
-        ];
+        return [ 'New Stock Assign in Yor Account' ];
     }
 }

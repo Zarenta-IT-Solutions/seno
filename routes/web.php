@@ -21,6 +21,12 @@ Route::middleware(['auth', 'verified','role:Admin'])->name('admin.')->prefix('ad
     Route::resource('reports', 'ReportController');
 });
 
+Route::middleware(['auth', 'verified','role:Admin'])->name('stockist.')->prefix('stockist')->namespace('stockist')->group(function () {
+//    Route::resource('gifts', 'GiftItemController');
+    Route::resource('products', 'ProductController');
+
+});
+
 Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/', 'HomeController@index')->name('home');
     Route::get('/profile', 'ProfileController@index')->name('profile');
