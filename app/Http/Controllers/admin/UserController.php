@@ -7,6 +7,7 @@ use App\Models\City;
 use App\Models\Country;
 use App\Models\State;
 use App\Models\User;
+use App\Notifications\UserRegisterNotification;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Session;
@@ -29,7 +30,7 @@ class UserController extends Controller
             return DataTables::of($users)
                 ->addIndexColumn()
                 ->addColumn('action', function ($user) {
-                    return '<a href="'.route('admin.users.edit',$user->id).'" class="btn btn-sm btn-primary"><i class="fa fa-edit"></i></a>';
+                    return '<a href="'.route('admin.users.edit',$user->id).'" class="btn btn-sm btn-primary"><i class="fa fa-edit"></i></a> <a onclick="Delete('.$user->id.')" class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></a>';
                 })
                 ->editColumn('profile_photo_path', '{{Storage::url($profile_photo_path)}}')
                 ->make();
@@ -74,6 +75,7 @@ class UserController extends Controller
         foreach($request->roles as $role){
             $user->assignRole($role);
         }
+        $user->notify(new UserRegisterNotification($request));
         $user->update();
         Session::flash('message', 'User Added Successfully!');
         Session::flash('alert-class', 'alert-success');
@@ -151,6 +153,7 @@ class UserController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $user = User::findorfail($id);
+        $user->delete();
     }
 }

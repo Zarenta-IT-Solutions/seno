@@ -215,8 +215,8 @@
                         <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <i class="fas fa-bell fa-fw"></i>
                             <!-- Counter - Alerts -->
-                            @if(count($user->unreadNotifications))
-                            <span class="badge badge-danger badge-counter">{{count($user->unreadNotifications)}}</span>
+                            @if(count(Auth::user()->unreadNotifications))
+                            <span class="badge badge-danger badge-counter">{{count(Auth::user()->unreadNotifications)}}</span>
                             @endif
                         </a>
                         <!-- Dropdown - Alerts -->
@@ -224,7 +224,7 @@
                             <h6 class="dropdown-header">
                                 Notifications
                             </h6>
-                            @foreach($user->unreadNotifications as $notification)
+                            @foreach(Auth::user()->unreadNotifications as $notification)
                             <a class="dropdown-item d-flex align-items-center" href="{{route('notifications.show',$notification->id)}}">
                                 <div class="mr-3">
                                     <div class="icon-circle bg-primary">

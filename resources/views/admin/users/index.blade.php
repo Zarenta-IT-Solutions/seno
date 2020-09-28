@@ -34,10 +34,16 @@
 
 @endsection
 
-@section('script')
+@section('style')
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.css">
+
+@endsection
+
+@section('script')
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.js"></script>
     <script>
-        $('.dataTable').DataTable({
+        var table = $('.dataTable').DataTable({
             processing: true,
             serverSide: true,
             ajax: '{{route('admin.users.index',['datatable'=>true])}}',
@@ -52,6 +58,28 @@
                 {data: 'action', name: 'action',orderable: false, searchable: false}
             ]
         });
+
+        function Delete(id){
+            $.confirm({
+                title: 'Confirm!',
+                content: 'AreYou Sure To Delete This User',
+                buttons: {
+                    confirm: function () {
+                      $.ajax({
+                          url:'{{route('admin.users.index')}}/'+id,
+                          type:'delete',
+                          data:{_token:'{{csrf_token()}}'},
+                          success:function(resp){
+                              table.ajax.reload();
+                          }
+                      });
+                    },
+                    cancel: function () {
+                        // $.alert('Canceled!');
+                    },
+                }
+            });
+        }
     </script>
 
 @endsection

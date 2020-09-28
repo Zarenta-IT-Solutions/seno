@@ -84,7 +84,7 @@ return [
     */
 
     'from' => [
-        'address' => env('MAIL_FROM_ADDRESS', 'hello@example.com'),
+        'address' => env('MAIL_FROM_ADDRESS', '0a5257a6c0-1e09d5@inbox.mailtrap.io'),
         'name' => env('MAIL_FROM_NAME', 'Example'),
     ],
 

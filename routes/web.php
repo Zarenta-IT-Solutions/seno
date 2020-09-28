@@ -18,7 +18,7 @@ Route::middleware(['auth', 'verified','role:Admin'])->name('admin.')->prefix('ad
     Route::resource('users', 'UserController');
     Route::resource('gifts', 'GiftItemController');
     Route::resource('products', 'ProductController');
-    Route::resource('report', 'ReportController');
+    Route::resource('reports', 'ReportController');
 });
 
 Route::middleware(['auth', 'verified'])->group(function () {
