@@ -10,7 +10,7 @@
                 <!-- Nested Row within Card Body -->
                 <div class="p-5">
                     <div class="text-center">
-                        <h1 class="h4 text-gray-900 mb-4">Add New User Account!</h1>
+                        <h1 class="h4 text-gray-900 mb-4">Edit User Account!</h1>
                     </div>
 
 
@@ -54,7 +54,13 @@
                             <input type="text" class="form-control form-control-user" required name="address" value="{{old('address',$user->address)}}" placeholder="Address">
                         </div>
                         <div class="form-group">
-                            <input type="tel" class="form-control form-control-user" name="mobile" value="{{old('mobile',$user->mobile)}}" placeholder="Mobile Number">
+                            <div class="col-sm-6">
+                                <input type="tel" class="form-control form-control-user" name="mobile" value="{{old('mobile',$user->mobile)}}" placeholder="Mobile Number">
+                            </div>
+                            <div class="col-sm-6">
+                                <input type="text" class="form-control form-control-user" name="pin_code" value="{{old('pin_code',$user->pin_code)}}" placeholder="Pin Code">
+                            </div>
+
                         </div>
                         <div class="form-group">
                             <select class="form-control form-control-user" name="roles[]" required multiple>

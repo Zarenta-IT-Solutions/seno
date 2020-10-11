@@ -21,8 +21,8 @@ Route::middleware(['auth', 'verified','role:Admin'])->name('admin.')->prefix('ad
     Route::resource('reports', 'ReportController');
 });
 
-Route::middleware(['auth', 'verified','role:Admin'])->name('stockist.')->prefix('stockist')->namespace('stockist')->group(function () {
-//    Route::resource('gifts', 'GiftItemController');
+Route::middleware(['auth', 'verified','role:Stockist'])->name('stockist.')->prefix('stockist')->namespace('stockist')->group(function () {
+    Route::resource('gifts', 'GiftItemController');
     Route::resource('products', 'ProductController');
 
 });

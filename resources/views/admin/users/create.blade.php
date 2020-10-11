@@ -47,8 +47,14 @@
                         <div class="form-group">
                             <input type="text" class="form-control form-control-user"  name="address" value="{{old('address')}}" placeholder="Address">
                         </div>
-                        <div class="form-group">
-                            <input type="tel" class="form-control form-control-user" name="mobile" value="{{old('mobile')}}" placeholder="Mobile Number">
+                        <div class="form-group row">
+                            <div class="col-sm-6">
+                                <input type="tel" class="form-control form-control-user" name="mobile" value="{{old('mobile')}}" placeholder="Mobile Number">
+                            </div>
+                            <div class="col-sm-6">
+                                <input type="text" class="form-control form-control-user" name="pin_code" value="{{old('pin_code')}}" placeholder="Pin Code">
+                            </div>
+
                         </div>
                         <div class="form-group">
                             <select class="form-control form-control-user" name="roles[]" required multiple>

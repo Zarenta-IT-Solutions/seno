@@ -20,9 +20,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0b4faa04-9079-4b22-9898-15013db1401e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/resources/views/stockist/gifts/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/stockist/products/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/webServers.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/webServers.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/admin/GiftItemController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/admin/GiftItemController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Notifications/AssignGiftNotification.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Notifications/AssignGiftNotification.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/admin/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/admin/ProductController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/stockist/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/stockist/ProductController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/users/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/users/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/users/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/users/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
@@ -186,18 +195,20 @@
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
     <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/admin/products" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/stockist/gifts" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\seno\resources\views\stockist\gifts" />
+      <recent name="C:\wamp64\www\seno\resources\views\stockist\products" />
       <recent name="C:\wamp64\www\seno\resources\views\admin\products" />
       <recent name="C:\wamp64\www\seno\resources\views\admin\gifts" />
       <recent name="C:\wamp64\www\seno\resources\views\admin\users" />
@@ -222,7 +233,12 @@
       <workItem from="1599991815101" duration="252000" />
       <workItem from="1601227426298" duration="11695000" />
       <workItem from="1601241567769" duration="13181000" />
-      <workItem from="1601321710384" duration="11048000" />
+      <workItem from="1601321710384" duration="13690000" />
+      <workItem from="1601485531946" duration="12000" />
+      <workItem from="1601763671146" duration="4154000" />
+      <workItem from="1601827572841" duration="13000" />
+      <workItem from="1602351496995" duration="333000" />
+      <workItem from="1602355833328" duration="2211000" />
     </task>
     <servers />
   </component>
@@ -242,17 +258,20 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="361" y="91" key="#Deployment" timestamp="1601230562097">
-      <screen x="0" y="0" width="1536" height="864" />
+    <state x="301" y="38" key="#Deployment" timestamp="1602357020243">
+      <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state x="361" y="91" key="#Deployment/0.0.1536.864@0.0.1536.864" timestamp="1601230562097" />
-    <state x="345" y="78" key="#SSH_Configurations" timestamp="1601229779564">
-      <screen x="0" y="0" width="1536" height="864" />
+    <state x="301" y="38" key="#Deployment/0.0.1280.720@0.0.1280.720" timestamp="1602357020243" />
+    <state x="361" y="91" key="#Deployment/0.0.1536.864@0.0.1536.864" timestamp="1601333766705" />
+    <state x="288" y="11" key="#SSH_Configurations" timestamp="1602356144981">
+      <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state x="345" y="78" key="#SSH_Configurations/0.0.1536.864@0.0.1536.864" timestamp="1601229779564" />
-    <state x="499" y="187" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1601331757372">
-      <screen x="0" y="0" width="1536" height="864" />
+    <state x="288" y="11" key="#SSH_Configurations/0.0.1280.720@0.0.1280.720" timestamp="1602356144981" />
+    <state x="345" y="78" key="#SSH_Configurations/0.0.1536.864@0.0.1536.864" timestamp="1601333748401" />
+    <state x="416" y="156" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1601767119816">
+      <screen x="0" y="0" width="1280" height="720" />
     </state>
+    <state x="416" y="156" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1280.720@0.0.1280.720" timestamp="1601767119816" />
     <state x="499" y="187" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.864@0.0.1536.864" timestamp="1601331757372" />
     <state x="549" y="187" key="FileChooserDialogImpl" timestamp="1601313260987">
       <screen x="0" y="0" width="1536" height="864" />
@@ -270,13 +289,19 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="624" y="331" key="WebDeployment.AddServerDialog.v.1/0.0.1536.864@0.0.1536.864" timestamp="1601229711702" />
-    <state x="610" y="163" key="ftp.server.browser" timestamp="1601230560086">
-      <screen x="0" y="0" width="1536" height="864" />
+    <state x="508" y="136" key="ftp.server.browser" timestamp="1602356138296">
+      <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state x="610" y="163" key="ftp.server.browser/0.0.1536.864@0.0.1536.864" timestamp="1601230560086" />
-    <state x="431" y="181" width="672" height="678" key="search.everywhere.popup" timestamp="1601333388978">
-      <screen x="0" y="0" width="1536" height="864" />
+    <state x="508" y="136" key="ftp.server.browser/0.0.1280.720@0.0.1280.720" timestamp="1602356138296" />
+    <state x="610" y="163" key="ftp.server.browser/0.0.1536.864@0.0.1536.864" timestamp="1601333765383" />
+    <state x="579" y="271" key="publish.login" timestamp="1602355871024">
+      <screen x="0" y="0" width="1280" height="720" />
     </state>
+    <state x="579" y="271" key="publish.login/0.0.1280.720@0.0.1280.720" timestamp="1602355871024" />
+    <state x="359" y="151" width="672" height="565" key="search.everywhere.popup" timestamp="1601764777739">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state x="359" y="151" width="672" height="565" key="search.everywhere.popup/0.0.1280.720@0.0.1280.720" timestamp="1601764777739" />
     <state x="431" y="181" width="672" height="678" key="search.everywhere.popup/0.0.1536.864@0.0.1536.864" timestamp="1601333388978" />
   </component>
 </project>

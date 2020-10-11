@@ -3,7 +3,7 @@
   <component name="WebServers">
     <option name="servers">
       <webServer id="a6aeaae9-a503-4f04-84cc-436ebec9b145" name="seno">
-        <fileTransfer rootFolder="/var/www/vhosts/seno.ga/httpdocs" accessType="SFTP" host="15.207.210.96" port="22" sshConfigId="2a290e7a-e5cd-4bb4-86aa-80bf6c0806e8" sshConfig="seno@15.207.210.96:22 password">
+        <fileTransfer accessType="SFTP" host="15.207.210.96" port="22" sshConfigId="2a290e7a-e5cd-4bb4-86aa-80bf6c0806e8" sshConfig="seno@15.207.210.96:22 password">
           <advancedOptions>
             <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
           </advancedOptions>

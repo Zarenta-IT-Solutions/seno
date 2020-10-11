@@ -25,7 +25,7 @@ class ProductController extends Controller
             return DataTables::of($products)
                 ->addIndexColumn()
                 ->addColumn('action', function ($products) {
-                    return '<a href="'.route('admin.products.edit',$products->id).'" class="btn btn-sm btn-primary"><i class="fa fa-edit"></i></a> <a onclick="Assign('.$products->id.','.$products->quantity.')" class="btn btn-sm btn-success"><i class="fa fa-plus-circle"></i></a></a> <a onclick="Delete('.$products->id.')" class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></a>';
+                    return '<a href="'.route('admin.products.edit',$products->id).'" class="btn btn-sm btn-primary"><i class="fa fa-edit"></i></a> </a> <a onclick="Delete('.$products->id.')" class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></a>';
                 })
                 ->editColumn('image', '{{Storage::url($image)}}')
                 ->make();

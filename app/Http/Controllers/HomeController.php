@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Gift;
+use App\Models\Product;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Spatie\Permission\Models\Role;
@@ -15,8 +18,16 @@ class HomeController extends Controller
      */
     public function index()
     {
-
-        return view('home.index');
+        $user = Auth::user();
+        $data = [];
+        if($user->hasRole('Admin')){
+            $data['mr'] = User::role('MR')->count();
+            $data['retailer'] = User::role('Stockist')->count();
+            $data['stockist'] = User::role('Retailer')->count();
+            $data['gift'] = Gift::sum('quantity');
+            $data['product'] = Product::sum('quantity');
+        }
+        return view('home.index')->with('data',$data);
     }
 
     /**

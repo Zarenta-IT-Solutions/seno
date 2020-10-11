@@ -33,6 +33,7 @@ class User extends Authenticatable
         'city_id',
         'country_id',
         'state_id',
+        'pin_code',
         'mobile',
         'address',
         'profile_photo_path'
